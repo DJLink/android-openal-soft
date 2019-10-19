@@ -23,7 +23,7 @@ else
     BINDIR       := $(abspath $(BINDIR) )
 endif
 
-ANDROID_NDK_ROOT=/Developer/DestinyCloudFist/android-ndk-r8b
+#ANDROID_NDK_ROOT=/Developer/DestinyCloudFist/android-ndk-r8b
 
 LOCAL_CFLAGS    +=  -I$(ROOTDIR)/$(OPENAL_DIR) \
                     -I$(ROOTDIR)/$(OPENAL_DIR)/include \
@@ -83,8 +83,8 @@ LOCAL_SRC_FILES :=  \
 
 # If building for versions after FROYO
 ifeq ($(POST_FROYO), yes)
-  LOCAL_CFLAGS +=   -DPOST_FROYO -I$(ANDROID_NDK_ROOT)/platforms/android-9/arch-arm/usr/include/
-  LOCAL_LDLIBS += -ldl -L$(ANDROID_NDK_ROOT)/platforms/android-9/arch-arm/usr/lib/
+  LOCAL_CFLAGS +=   -DPOST_FROYO -I$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/include/
+  LOCAL_LDLIBS += -ldl -L$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/lib/
   LOCAL_SRC_FILES += $(OPENAL_DIR)/Alc/opensles.c
 endif
 
