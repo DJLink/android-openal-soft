@@ -8,7 +8,7 @@ ANALYZE      ?= no
 ANALYZE_OUTPUT?=/dev/null
 
 include $(CLEAR_VARS)
-TARGET_ARCH_ABI  ?=armeabi-v7a
+TARGET_ARCH_ABI  ?=$(APP_ABI)
 LOCAL_LDLIBS     := -llog
 LOCAL_MODULE     := openal
 LOCAL_ARM_MODE   := arm
