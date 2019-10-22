@@ -1,3 +1,16 @@
+Fixed openal-soft to build a working arm64/x64 library for Android.
+
+In case anyone is looking for a quick fix the problematic code is in config.h
+#define SIZEOF_VOIDP 4
+on 64 bits this needs to be 8
+
+There is also a pre-build static library with
+android-16
+NDK-r12b
+
+______________________________________________________________
+ORIGINAL README
+
 This is an OpenAL-soft shared library for Android.
 
 Features:
