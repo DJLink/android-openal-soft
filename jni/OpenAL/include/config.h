@@ -96,8 +96,11 @@
 #define SIZEOF_UINT 4
 
 /* Define to the size of a void pointer type */
+#if defined(__aarch64__)
+#define SIZEOF_VOIDP 8
+#else
 #define SIZEOF_VOIDP 4
-
+#endif
 /* Define if we have GCC's destructor attribute */
 #define HAVE_GCC_DESTRUCTOR 1
 

@@ -8,7 +8,7 @@ ANALYZE      ?= no
 ANALYZE_OUTPUT?=/dev/null
 
 include $(CLEAR_VARS)
-TARGET_ARCH_ABI  ?=$(APP_ABI)
+#TARGET_ARCH_ABI  ?=$(APP_ABI)
 LOCAL_LDLIBS     := -llog
 LOCAL_MODULE     := openal
 LOCAL_ARM_MODE   := arm
@@ -82,11 +82,11 @@ LOCAL_SRC_FILES :=  \
 
 
 # If building for versions after FROYO
-ifeq ($(POST_FROYO), yes)
-  LOCAL_CFLAGS +=   -DPOST_FROYO -I$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/include/
-  LOCAL_LDLIBS += -ldl -L$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/lib/
-  LOCAL_SRC_FILES += $(OPENAL_DIR)/Alc/opensles.c
-endif
+#ifeq ($(POST_FROYO), yes)
+#  LOCAL_CFLAGS +=   -DPOST_FROYO -I$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/include/
+#  LOCAL_LDLIBS += -ldl -L$(ANDROID_NDK_ROOT)/platforms/android-29/arch-arm/usr/lib/
+#  LOCAL_SRC_FILES += $(OPENAL_DIR)/Alc/opensles.c
+#endif
 
 
 
