@@ -96,7 +96,7 @@
 #define SIZEOF_UINT 4
 
 /* Define to the size of a void pointer type */
-/* __LP64__ should cover all 64-bit, but just in case here is arm64 and x64
+/* __LP64__ should cover all 64-bit, but just in case here is arm64 and x64 */
 #if defined(__LP64__) || defined(__aarch64__) || defined(__x86_64__)
 #define SIZEOF_VOIDP 8
 #else
