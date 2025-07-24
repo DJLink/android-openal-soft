@@ -7,6 +7,6 @@ typedef struct {
   void (*alc_android_resume)();
   void (*alc_android_set_java_vm)(JavaVM*);
 } ApportableOpenALFuncs;
-ApportableOpenALFuncs apportableOpenALFuncs;
+static ApportableOpenALFuncs apportableOpenALFuncs;
 
 #endif
